@@ -1,5 +1,9 @@
+.main {
+  flex: 1;
+}
 .bg-dark {
   background-color: #12002b;
+  min-height: 85vh;
 }
 
 .sign-in-button {
@@ -49,4 +53,7 @@
 .input-wrapper input {
   padding: 5px;
   font-size: 1.2rem;
+}
+.hidden {
+  display: none;
 }

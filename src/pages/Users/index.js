@@ -1,8 +1,15 @@
-import Account from "../../components/Account";
 import "./users.css";
-import React from "react";
+import { useSelector } from "react-redux";
+import { Navigate } from "react-router-dom";
+import Account from "../../components/Account";
 
 function Users() {
+  const token = useSelector((state) => state.user.token); // Récupère le token
+
+  if (!token) {
+    return <Navigate to="/login" />; // Si aucun token, redirige vers la page login
+  }
+
   return (
     <main className="main bg-dark">
       <div className="header">
