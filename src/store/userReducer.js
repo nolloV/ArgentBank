@@ -19,7 +19,6 @@ const userSlice = createSlice({
     setDisconnected(state) {
       state.isConnected = false;
       state.token = null;
-      state.userName = "";
       state.firstName = "";
       state.lastName = "";
     },

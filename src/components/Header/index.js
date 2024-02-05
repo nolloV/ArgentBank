@@ -10,6 +10,9 @@ import { setDisconnected } from "../../store/userReducer";
 function Header() {
   const isConnected = useSelector((state) => state.user.isConnected);
   const dispatch = useDispatch();
+  const firstName = useSelector((state) => state.user.firstName); // Récupère le firstName
+  const lastName = useSelector((state) => state.user.lastName); // Récupère le lastName
+  const userName = useSelector((state) => state.user.userName); // Récupère l'userName'
 
   const handleSignOut = () => {
     dispatch(setDisconnected());
@@ -30,7 +33,8 @@ function Header() {
           <div>
             <NavLink className="main-nav-item" href="./user.html">
               <FontAwesomeIcon className="fa-icon" icon={faUserCircle} />
-              Tony
+              {userName ? userName : `${firstName} ${lastName}`}{" "}
+              {/* Si userName disponible, alors affichez userName sinon firstName et lastName */}
             </NavLink>
             <NavLink to="/" className="main-nav-item" onClick={handleSignOut}>
               <FontAwesomeIcon className="fa-icon" icon={faSignOut} />
