@@ -1,6 +1,6 @@
 import "./header.css";
 import React from "react";
-import logo from "../../assets/argentBankLogo.png";
+import logo from "../../assets/argentBankLogo.webp";
 import { NavLink } from "react-router-dom";
 import { faSignOut, faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
